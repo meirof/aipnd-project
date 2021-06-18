@@ -27,7 +27,7 @@ def process_image(image_path):
     width, height = im.size
     center = width/2, height/2
     left, top, right, bottom = center[0]-(224/2), center[1]-(224/2), center[0]+(224/2), center[1]+(224/2)
-    pil_image = im.crop((left, top, right, bottom))
+    im = im.crop((left, top, right, bottom))
 
     im = np.array(im)
     im = im / 255

@@ -32,7 +32,7 @@ def config_model(trained_model, device, output,
     except: 
       in_features = my_model._modules['classifier'].in_features
 
-
+    print(f"The number of in_features are: {in_features}")
     
     my_model.classifier = nn.Sequential(OrderedDict([
                   ('fc1', nn.Linear(in_features, hidden_units)),
